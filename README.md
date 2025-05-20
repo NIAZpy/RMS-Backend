@@ -1,2 +1,2 @@
-run server:npm run dev
-cd ai_rms_backend
+run server:{npm run dev}
+{cd ai_rms_backend}
