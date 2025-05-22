@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const interviewRoutes = require('./routes/interviews');
 const feedbackRoutes = require('./routes/feedbacks');
+const aiRoutes = require('./routes/ai');
 
 // Routes
 const authRoutes = require('./routes/auth');
@@ -23,6 +24,7 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/candidates', candidateRoutes);
 app.use('/api/interviews', interviewRoutes);
 app.use('/api/feedbacks', feedbackRoutes);
+app.use('/api/ai', aiRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
