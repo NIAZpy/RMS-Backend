@@ -21,6 +21,7 @@ const candidateSchema = new mongoose.Schema({
   },
   skills: {
     type: [String],
+    required: true,
     validate: {
       validator: function (arr) {
         return arr.length > 0;
@@ -46,4 +47,5 @@ const candidateSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Candidate', candidateSchema);
+module.exports = mongoose.models.Candidate || mongoose.model('Candidate', candidateSchema);
+
